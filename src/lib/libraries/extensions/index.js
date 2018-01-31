@@ -4,8 +4,16 @@ import penImage from './pen.png';
 import speechImage from './speech.png';
 import videoImage from './video-sensing.png';
 import wedoImage from './wedo.png';
+import wildcardsImage from './wildcard.png';
 
 export default [
+    {
+        name: 'WildCards',
+        extensionURL: 'wildcards',
+        iconURL: wildcardsImage,
+        description: 'Explore and build with WildCards.',
+        featured: true
+    },
     {
         name: 'Music',
         extensionURL: 'music',
