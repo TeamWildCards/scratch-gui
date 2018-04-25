@@ -15,7 +15,7 @@
     "test:unit": "jest test[\\\\/]unit",
     "watch": "webpack --progress --colors --watch"
   },
-  "author": "Massachusetts Institute of Technology",
+  "author": "Massachusetts Institute of Technology", 
   "license": "BSD-3-Clause",
   "homepage": "https://github.com/TeamWildCards/scratch-gui#readme",
   "repository": {
