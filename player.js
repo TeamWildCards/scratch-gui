@@ -203,7 +203,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "body {\n    padding: 0;\n    margin: 0;\n}\n", ""]);
+exports.push([module.i, "body {\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n", ""]);
 
 // exports
 
