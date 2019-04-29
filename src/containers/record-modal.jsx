@@ -43,7 +43,9 @@ class RecordModal extends React.Component {
         this.setState({recording: true});
     }
     handleStopRecording (samples, sampleRate, levels, trimStart, trimEnd) {
-        this.setState({samples, sampleRate, levels, trimStart, trimEnd, recording: false});
+        if (samples.length > 0) {
+            this.setState({samples, sampleRate, levels, trimStart, trimEnd, recording: false});
+        }
     }
     handlePlay () {
         this.setState({playing: true});
@@ -73,21 +75,29 @@ class RecordModal extends React.Component {
                 sampleRate: this.state.sampleRate,
                 channelData: [clippedSamples]
             }).then(wavBuffer => {
-                const md5 = String(Math.floor(100000 * Math.random()));
                 const vmSound = {
                     format: '',
-                    md5: `${md5}.wav`,
-                    name: `recording ${this.props.vm.editingTarget.sprite.sounds.length}`
+                    dataFormat: 'wav',
+                    rate: this.state.sampleRate,
+                    sampleCount: clippedSamples.length
                 };
 
-                // Load the encoded .wav into the storage cache
+                // Create an asset from the encoded .wav and get resulting md5
                 const storage = this.props.vm.runtime.storage;
-                storage.builtinHelper.cache(
+                vmSound.asset = storage.createAsset(
                     storage.AssetType.Sound,
                     storage.DataFormat.WAV,
                     new Uint8Array(wavBuffer),
-                    md5
+                    null,
+                    true // generate md5
                 );
+                vmSound.assetId = vmSound.asset.assetId;
+
+                // update vmSound object with md5 property
+                vmSound.md5 = `${vmSound.assetId}.${vmSound.dataFormat}`;
+                // The VM will update the sound name to a fresh name
+                // if the following is already taken
+                vmSound.name = 'recording1';
 
                 this.props.vm.addSound(vmSound).then(() => {
                     this.props.onClose();
@@ -133,7 +143,7 @@ RecordModal.propTypes = {
 };
 
 const mapStateToProps = state => ({
-    vm: state.vm
+    vm: state.scratchGui.vm
 });
 
 const mapDispatchToProps = dispatch => ({

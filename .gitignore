@@ -4,6 +4,7 @@
 # NPM
 /node_modules
 npm-*
+/package-lock.json
 
 # Testing
 /.nyc_output
@@ -11,6 +12,7 @@ npm-*
 
 # Build
 /build
+/dist
 /.opt-in
 
 # generated translation files
