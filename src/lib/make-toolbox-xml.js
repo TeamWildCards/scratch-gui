@@ -732,19 +732,19 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML,
 
     const everything = [
         xmlOpen,
-        motion(isStage, targetId), gap,
-        looks(isStage, targetId, costumeName, backdropName), gap,
-        sound(isStage, targetId, soundName), gap,
         events(isStage, targetId), gap,
         control(isStage, targetId), gap,
         sensing(isStage, targetId), gap,
         operators(isStage, targetId), gap,
         variables(isStage, targetId), gap,
+        motion(isStage, targetId), gap,
+        looks(isStage, targetId, costumeName, backdropName), gap,
+        sound(isStage, targetId, soundName), gap,
         myBlocks(isStage, targetId)
     ];
 
     if (categoriesXML) {
-        everything.push(gap, categoriesXML);
+        everything.splice(2,0,categoriesXML);
     }
 
     everything.push(xmlClose);
