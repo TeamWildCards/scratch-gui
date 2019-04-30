@@ -2479,7 +2479,7 @@
     },
     {
         "name": "Cat",
-        "md5": "b7853f557e4426412e64bb3da6531a99.svg",
+        "md5": "14efbe56fa505aac1bf0be97906d32a2.svg",
         "type": "sprite",
         "tags": [
             "animals",
@@ -2511,7 +2511,7 @@
                 {
                     "costumeName": "cat-a",
                     "baseLayerID": -1,
-                    "baseLayerMD5": "b7853f557e4426412e64bb3da6531a99.svg",
+                    "baseLayerMD5": "14efbe56fa505aac1bf0be97906d32a2.svg",
                     "bitmapResolution": 1,
                     "rotationCenterX": 48,
                     "rotationCenterY": 50

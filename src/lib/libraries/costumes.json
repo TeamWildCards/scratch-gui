@@ -1809,8 +1809,8 @@
         ]
     },
     {
-        "name": "Cat-a",
-        "md5": "b7853f557e4426412e64bb3da6531a99.svg",
+        "name": "TB-a",
+        "md5": "14efbe56fa505aac1bf0be97906d32a2.svg",
         "type": "costume",
         "tags": [
             "animals",
@@ -1824,25 +1824,6 @@
         "info": [
             48,
             50,
-            1
-        ]
-    },
-    {
-        "name": "Cat-b",
-        "md5": "e6ddc55a6ddd9cc9d84fe0b4c21e016f.svg",
-        "type": "costume",
-        "tags": [
-            "animals",
-            "cat",
-            "kitten",
-            "kitty",
-            "mammal",
-            "orange",
-            "scratch cat"
-        ],
-        "info": [
-            46,
-            53,
             1
         ]
     },
