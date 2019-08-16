@@ -27,7 +27,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: $menu-bar-standard-font-size;
     font-weight: bold;
-    background-color: $motion-primary;
+    background-color: #5F259F;
     color: $ui-white;
 }
 
@@ -49,6 +49,10 @@
     cursor: pointer;
 }
 
+.wildcards-logo {
+    height:  1.6rem;
+    vertical-align: middle;
+}
 .language-icon {
     height:  1.5rem;
     vertical-align: middle;

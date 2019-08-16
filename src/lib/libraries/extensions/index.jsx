@@ -46,6 +46,9 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import wildcardsIconURL from './wildcards/wildcards.png';
+import wildcardsInsetIconURL from './wildcards/wildcards-small.svg';
+
 export default [
     {
         name: (
@@ -162,6 +165,21 @@ export default [
                 defaultMessage="Make anything into a key."
                 description="Description for the 'Makey Makey' extension"
                 id="gui.extension.makeymakey.description"
+            />
+        ),
+        featured: true
+    },
+    {
+        name: 'Wildcards',
+        extensionId: 'wildcards',
+        collaborator: 'Wildcards',
+        iconURL: wildcardsIconURL,
+        insetIconURL: wildcardsInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Extend Scratch to control hardware."
+                description="Description for the 'Wildcards' extension"
+                id="gui.extension.wildcards.description"
             />
         ),
         featured: true

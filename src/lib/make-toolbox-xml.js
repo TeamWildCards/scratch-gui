@@ -743,14 +743,14 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
         }
         // return `undefined`
     };
-    const motionXML = moveCategory('motion') || motion(isStage, targetId);
-    const looksXML = moveCategory('looks') || looks(isStage, targetId, costumeName, backdropName);
-    const soundXML = moveCategory('sound') || sound(isStage, targetId, soundName);
     const eventsXML = moveCategory('event') || events(isStage, targetId);
     const controlXML = moveCategory('control') || control(isStage, targetId);
     const sensingXML = moveCategory('sensing') || sensing(isStage, targetId);
     const operatorsXML = moveCategory('operators') || operators(isStage, targetId);
     const variablesXML = moveCategory('data') || variables(isStage, targetId);
+    const motionXML = moveCategory('motion') || motion(isStage, targetId);
+    const looksXML = moveCategory('looks') || looks(isStage, targetId, costumeName, backdropName);
+    const soundXML = moveCategory('sound') || sound(isStage, targetId, soundName);
     const myBlocksXML = moveCategory('procedures') || myBlocks(isStage, targetId);
 
     const everything = [
@@ -767,7 +767,7 @@ const makeToolboxXML = function (isStage, targetId, categoriesXML = [],
     ];
 
     for (const extensionCategory of categoriesXML) {
-        everything.push(gap, extensionCategory.xml);
+        everything.splice(2, 0, extensionCategory.xml);
     }
 
     everything.push(xmlClose);
