@@ -48,6 +48,8 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 import wildcardsIconURL from './wildcards/wildcards.png';
 import wildcardsInsetIconURL from './wildcards/wildcards-small.svg';
+import wildcardsConnectionIconURL from './wildcards/wildcards-small.svg';
+import wildcardsConnectionSmallIconURL from './wildcards/wildcards-small.svg';
 
 export default [
     {
@@ -177,12 +179,27 @@ export default [
         insetIconURL: wildcardsInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage="Extend Scratch to control hardware."
+                defaultMessage="Extend projects control hardware."
                 description="Description for the 'Wildcards' extension"
                 id="gui.extension.wildcards.description"
             />
         ),
-        featured: true
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        internetConnectionRequired: false,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: wildcardsConnectionIconURL,
+        connectionSmallIconURL: wildcardsConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their Wildcards."
+                id="gui.extension.wildcards.connectingMessage"
+            />
+        ),
+        helpLink: 'https://wildcards.io'
     },
     {
         name: 'micro:bit',
